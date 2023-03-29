@@ -84,13 +84,33 @@ conda activate mon_environnement
 ```
 
 ## L'environnement de développement intégré (IDE)
-TODO
+
+Développer un script peut être fait directement dans un éditeur de texte, toutefois, avoir recours à un environnement de développement intégré va offrir des outils pour faciliter le développement :
+- un éditeur de texte spécialisé dans le développement : coloration syntaxique, indentation du code, autocomplétion
+- une interface pour le gestionnaire de version
+- un débogueur pour executer le code ligne par ligne etc.
+
+Certains IDE sont spécialisé pour un langage de programmation donné, d'autres sont plus généraliste.
+
+Pour Python les IDE les plus connus sont :
+- PyCharm
+- Spyder
+- Visual Studio Code
+
+C'est ce dernier que je vous conseille d'utiliser.
 
 ### VSCode/VSCodium
-TODO
+Visual Studio Code (VSCode pour les intimes), est un IDE développé dont le code source est public (et sous licence MIT). Toutefois, le logiciel diffusé par Microsoft, VSCode, s'il est gratuit est dans une licence propriétaire et intègre des fonctionnalité de télémétrie.
+
+C'est la raison pour laquelle, la communauté open-source a décidé de re-compiler le code fourni par Microsoft et de distribuer programme sous une licence réellement open-source (MIT). Ce produit s'appelle VSCodium.
+
+Ainsi bien qu'ils aient les mêmes fonctionnalités, les différences en termes de licence font que seul VSCodium fait partie du socle interministériel de logiciels libres (SILL).[Plus d'informations](https://sill.etalab.gouv.fr/)
+
 
 ### L'installation
-TODO
+
+[Lien de téléchargement](https://github.com/VSCodium/vscodium/releases).
+Choisir le paquet *"VSCodiumUserSetup"* ia32 ou x64 suivant votre version de windows.
 
 ### Les extensions
 TODO
