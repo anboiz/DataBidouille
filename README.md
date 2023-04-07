@@ -121,8 +121,8 @@ TODO
 ## Liste des exercices :
 
 - [X] Charger des données (Lire un fichier, un ensemble de fichiers, les concaténer)
-- [] Écrire des données sur le disque TODO
-- [] Filtrer les données (Extraire des données correspondant à une partie de l'ensemble de départ) TODO
-- [] Créer de nouvelles colonnes (Ajouter des colonnes à nos tableaux de données) TODO
-- [] Réaliser une jointure (Lier les informations de deux tableaux) TODO
-- [] Réaliser des regroupements TODO
+- [ ] Écrire des données sur le disque TODO
+- [ ] Filtrer les données (Extraire des données correspondant à une partie de l'ensemble de départ) TODO
+- [ ] Créer de nouvelles colonnes (Ajouter des colonnes à nos tableaux de données) TODO
+- [ ] Réaliser une jointure (Lier les informations de deux tableaux) TODO
+- [ ] Réaliser des regroupements TODO
