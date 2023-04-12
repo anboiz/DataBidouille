@@ -1,4 +1,5 @@
 from colorama import Fore, Style # just_fix_windows_console
+import random
 import pandas as pd
 
 class Verification():
@@ -25,7 +26,14 @@ class Verification():
         print(Style.RESET_ALL)
     
     def fail(self) -> None:
-        print(Fore.RED + '😯 Nope, pas exactement. Essaie encore')
+        answers = [
+            "😯 Nope, pas exactement. Essaie encore",
+            "🦕 Bad luck kid, maybe next time. Come back whenever you're ready",
+            "Le grand serpent ne se laisse pas dompter si facilement... 🐉",
+            "Encore un peu d’entraînement ? 🤕"
+            
+        ]
+        print(Fore.RED + f'{random.choice(answers)}')
         print(Style.RESET_ALL)
 
 if __name__ == '__main__':
