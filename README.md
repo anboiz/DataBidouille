@@ -83,6 +83,11 @@ Une fois l'environnement crée, il est possible de l'activer avec la commande :
 conda activate mon_environnement
 ```
 
+Le dossier DataBidouille contient un fichier `requirements.txt` pour générer facilement l'environnement virtuel avec les bonnes bibliothèque.
+```bash
+conda create -n DataBidouille python=3.10 --file requirements.txt
+```
+
 ## L'environnement de développement intégré (IDE)
 
 Développer un script peut être fait directement dans un éditeur de texte, toutefois, avoir recours à un environnement de développement intégré va offrir des outils pour faciliter le développement :
@@ -109,14 +114,32 @@ Ainsi bien qu'ils aient les mêmes fonctionnalités, les différences en termes 
 
 ### L'installation
 
-[Lien de téléchargement](https://github.com/VSCodium/vscodium/releases).
-Choisir le paquet *"VSCodiumUserSetup"* ia32 ou x64 suivant votre version de windows.
+- **VSCodium** : [Lien de téléchargement](https://github.com/VSCodium/vscodium/releases). Choisir le paquet `VSCodiumUserSetup` ia32 ou x64 suivant votre version de windows.Malheureusement vous pouvez rencontrer un message d'erreur vous signalant que le logiciel n'est pas signé. Dans ce cas il ne sera pas possible de l'installer.
+
+- **VSCode** : [Lien de téléchargement](https://code.visualstudio.com/Download). Choisir `User Installer x64`. 
+
 
 ### Les extensions
-TODO
+Une fois lancée l'interface VSCode (ou VSCodium) permet d'intégrer des extensions qui simplifieront les développement.
+
+Pour se faire, utilisez le bouton ![Bouton extension](static/extensions.png).
+
+Parmi les extensions qui vont être nécessaires :
+
+- Python (par Microsoft) pour des outils de développement adaptés à Python ;
+- Jupyter (par Microsoft) pour l'execution des calepins directement dans l'IDE ;
+- Anaconda (facultatif).
+
+![extention python](static/ext_python.png)
+
 
 ## Fonctionnement général : script vs calepin (notebook)
-TODO
+
+Le script est une fichier (généralement `.py`). Il se lance dans son intégralité et donne le résultat à la fin. Les scripts sont plutôt utilisés pour des processus automatisés.
+
+A contrario le calepin (ou notebook, généralement `.ipynb`), permet d'executer des blocs de code un à un et d'y intercaler du texte. Le calepin sera plus utile pour le prototypage d'un processus et l'exploration de la donnée.
+
+
 
 ## Liste des exercices :
 
