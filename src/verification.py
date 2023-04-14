@@ -3,6 +3,7 @@ import random
 import pandas as pd
 from typing import List, Any
 from pathlib import Path
+import hashlib
 
 class Verification():
     # def __init__(self,data:pd.DataFrame) -> None:
@@ -94,6 +95,34 @@ class Verification_any(Verification):
 
         self.success()
         return
+
+def md5(path_to_file:Path) ->str:
+    BLOCKSIZE = 65536
+    hasher = hashlib.md5()
+    with open(path_to_file, 'rb') as afile:
+        buf = afile.read(BLOCKSIZE)
+        while len(buf) > 0:
+            hasher.update(buf)
+            buf = afile.read(BLOCKSIZE)
+            print(hasher.hexdigest())
+    
+    return hasher.hexdigest()
+class Verification_file(Verification):
+    def __init__(self,path_to_file:Path) -> None:
+        self.hash_md5 = md5(path_to_file)
+    
+    def check(self, path_to_file:Path) -> None:
+
+        try :
+            user_file_md5 = md5(path_to_file)
+            
+            if user_file_md5 == self.hash_md5:
+                self.success()
+        except Exception :
+            self.fail()
+        
+        self.fail()
+        
 
 if __name__ == '__main__':
     a = Path('data/batiments').glob('.xlsx')
