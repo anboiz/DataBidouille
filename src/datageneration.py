@@ -71,3 +71,13 @@ for idx, split in enumerate(range(splits)):
     end += index_to_split
 
     temporary_df.to_excel(f'data/batiments/batiments_{idx:02d}.xlsx', index=False)
+
+extrait = batiments_df[:9000].copy()
+
+extrait['surface'] = rng.integers(low=50, high=100_000, size=len(extrait.index))
+
+mask = rng.choice([True,False],size=len(extrait.index),p=[0.1,0.9])
+
+extrait.loc[mask,'surface'] = '-'
+
+extrait.to_csv('data/batiments_alt.gz',compression='gzip',index=False)

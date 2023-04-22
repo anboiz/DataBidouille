@@ -18,5 +18,8 @@ correction_exercice_1_3_2 = verification.Verification_list(file_gen)
 data_liste = [pd.read_excel(e) for e in file_gen]
 correction_exercice_1_3_3 = verification.Verification_df(pd.concat(data_liste))
 
+data = pd.read_csv('data/batiments_alt.gz',compression='gzip',na_values='-')
+correction_exercice_1_4 = verification.Verification_df(data)
+
 if __name__ == '__main__':
     print([x for x in Path('data/batiments').glob('**/*') if x.is_file()])
