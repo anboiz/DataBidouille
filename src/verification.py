@@ -104,7 +104,6 @@ def md5(path_to_file:Path) ->str:
         while len(buf) > 0:
             hasher.update(buf)
             buf = afile.read(BLOCKSIZE)
-            print(hasher.hexdigest())
     
     return hasher.hexdigest()
 class Verification_file(Verification):
@@ -112,16 +111,19 @@ class Verification_file(Verification):
         self.hash_md5 = md5(path_to_file)
     
     def check(self, path_to_file:Path) -> None:
-
+        
         try :
             user_file_md5 = md5(path_to_file)
             
             if user_file_md5 == self.hash_md5:
                 self.success()
+                return 
         except Exception :
             self.fail()
+            return
         
         self.fail()
+        return
         
 
 if __name__ == '__main__':
